@@ -1,0 +1,182 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 17:55:48  October 20, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Microcomputer_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CEFA2F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY Microcomputer
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "11.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:08:54  OCTOBER 05, 2012"
+set_global_assignment -name LAST_QUARTUS_VERSION 14.0
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+
+
+
+
+
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+
+set_global_assignment -name SEED 1
+
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION OFF
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE BALANCED
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name FITTER_EFFORT "AUTO FIT"
+set_global_assignment -name SAVE_DISK_SPACE OFF
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIXII AUTO
+set_global_assignment -name REMOVE_DUPLICATE_REGISTERS OFF
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+set_location_assignment PIN_T22 -to rxd1
+set_location_assignment PIN_T15 -to txd1
+set_location_assignment PIN_R22 -to rts1
+
+set_location_assignment PIN_R15 -to rxd2
+set_location_assignment PIN_R21 -to txd2
+set_location_assignment PIN_R16 -to rts2
+
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to rxd1
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to rxd2
+
+set_location_assignment PIN_H13 -to clk
+set_location_assignment PIN_H18 -to n_reset
+
+
+set_location_assignment PIN_P22 -to video
+set_location_assignment PIN_R17 -to videoSync
+set_location_assignment PIN_N20 -to ps2Data
+set_location_assignment PIN_N21 -to ps2Clk
+
+set_location_assignment PIN_M22 -to videoB0
+set_location_assignment PIN_L22 -to videoB1
+set_location_assignment PIN_M20 -to videoG0
+set_location_assignment PIN_M21 -to videoG1
+set_location_assignment PIN_K21 -to videoR0
+set_location_assignment PIN_K22 -to videoR1
+set_location_assignment PIN_T19 -to hSync
+set_location_assignment PIN_T20 -to vSync
+
+set_location_assignment PIN_D3 -to sdMISO
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to sdMISO
+set_location_assignment PIN_L1 -to sdSCLK
+set_location_assignment PIN_E2 -to sdMOSI
+set_location_assignment PIN_C2 -to sdCS
+set_location_assignment PIN_U1 -to driveLED
+
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to n_reset
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVCMOS"
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name WEAK_PULL_UP_RESISTOR OFF
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_global_assignment -name VHDL_FILE ../Components/TERMINAL/SBCTextDisplayRGB.vhd
+set_global_assignment -name VHDL_FILE ../Components/M6800/cpu68.vhd
+set_global_assignment -name VHDL_FILE ../Components/Z80/T80s.vhd
+set_global_assignment -name VHDL_FILE ../Components/Z80/T80_Reg.vhd
+set_global_assignment -name VHDL_FILE ../Components/Z80/T80_Pack.vhd
+set_global_assignment -name VHDL_FILE ../Components/Z80/T80_MCode.vhd
+set_global_assignment -name VHDL_FILE ../Components/Z80/T80_ALU.vhd
+set_global_assignment -name VHDL_FILE ../Components/Z80/T80.vhd
+set_global_assignment -name VHDL_FILE ../Components/M6809/cpu09new.vhd
+set_global_assignment -name VHDL_FILE ../Components/TERMINAL/CGABoldRom.vhd
+set_global_assignment -name VHDL_FILE ../Components/UART/bufferedUART.vhd
+set_global_assignment -name SOURCE_FILE Microcomputer.qsf
+set_global_assignment -name VHDL_FILE ../Components/M6502/T65_Pack.vhd
+set_global_assignment -name VHDL_FILE ../Components/M6502/T65_MCode.vhd
+set_global_assignment -name VHDL_FILE ../Components/M6502/T65_ALU.vhd
+set_global_assignment -name VHDL_FILE ../Components/M6502/T65.vhd
+set_global_assignment -name VHDL_FILE Microcomputer.vhd
+set_global_assignment -name CDF_FILE output_files/Microcomputer.cdf
+set_global_assignment -name VHDL_FILE ../Components/SDCARD/sd_controller.vhd
+set_global_assignment -name QIP_FILE ../ROMS/6502/M6502_BASIC_ROM.qip
+set_global_assignment -name QIP_FILE ../ROMS/Z80/Z80_BASIC_ROM.qip
+set_global_assignment -name QIP_FILE ../Components/TERMINAL/DisplayRam1K.qip
+set_global_assignment -name CDF_FILE output_files/m6502.cdf
+set_global_assignment -name QIP_FILE ../Components/TERMINAL/DisplayRam2K.qip
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_1993
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name QIP_FILE ../Components/TERMINAL/CGABoldRomReduced.qip
+set_global_assignment -name QIP_FILE InternalRam1K.qip
+set_global_assignment -name QIP_FILE InternalRam2K.qip
+set_global_assignment -name QIP_FILE InternalRam4K.qip
+set_global_assignment -name QIP_FILE ../ROMS/6809/M6809_EXT_BASIC_ROM.qip
+set_global_assignment -name QIP_FILE ../ROMS/Z80/Z80_CPM_BASIC_ROM.qip
+
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to videoR0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ps2Data
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ps2Clk
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to vSync
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to videoSync
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to videoR1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to videoG1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to videoG0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to videoB0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to videoB1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to video
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to txd2
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to txd1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to sdSCLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to sdMOSI
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to sdCS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to rts2
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to rts1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hSync
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to driveLED
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

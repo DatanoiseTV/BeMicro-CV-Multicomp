@@ -1,0 +1,28 @@
+|Microcomputer
+n_reset => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+rxd1 => ~NO_FANOUT~
+txd1 <= txd1.DB_MAX_OUTPUT_PORT_TYPE
+rts1 <= rts1.DB_MAX_OUTPUT_PORT_TYPE
+rxd2 => ~NO_FANOUT~
+txd2 <= txd2.DB_MAX_OUTPUT_PORT_TYPE
+rts2 <= rts2.DB_MAX_OUTPUT_PORT_TYPE
+videoSync <= videoSync.DB_MAX_OUTPUT_PORT_TYPE
+video <= video.DB_MAX_OUTPUT_PORT_TYPE
+videoR0 <= videoR0.DB_MAX_OUTPUT_PORT_TYPE
+videoG0 <= videoG0.DB_MAX_OUTPUT_PORT_TYPE
+videoB0 <= videoB0.DB_MAX_OUTPUT_PORT_TYPE
+videoR1 <= videoR1.DB_MAX_OUTPUT_PORT_TYPE
+videoG1 <= videoG1.DB_MAX_OUTPUT_PORT_TYPE
+videoB1 <= videoB1.DB_MAX_OUTPUT_PORT_TYPE
+hSync <= hSync.DB_MAX_OUTPUT_PORT_TYPE
+vSync <= vSync.DB_MAX_OUTPUT_PORT_TYPE
+ps2Clk <> <UNC>
+ps2Data <> <UNC>
+sdCS <= sdCS.DB_MAX_OUTPUT_PORT_TYPE
+sdMOSI <= sdMOSI.DB_MAX_OUTPUT_PORT_TYPE
+sdMISO => ~NO_FANOUT~
+sdSCLK <= comb.DB_MAX_OUTPUT_PORT_TYPE
+driveLED <= <VCC>
+
+
