@@ -139,7 +139,7 @@ q => basRomData
 ram1: entity work.InternalRam4K
 port map
 (
-address => cpuAddress(11 downto 0),
+address => cpuAddress(14 downto 0),
 clock => clk,
 data => cpuDataOut,
 wren => not(n_memWR or n_internalRam1CS),
@@ -223,7 +223,7 @@ n_memWR <= not(cpuClock) nand (not n_WR);
 n_basRomCS <= '0' when cpuAddress(15 downto 13) = "111" else '1'; --8K at top of memory
 n_interface1CS <= '0' when cpuAddress(15 downto 1) = "111111111101000" else '1'; -- 2 bytes FFD0-FFD1
 n_interface2CS <= '0' when cpuAddress(15 downto 1) = "111111111101001" else '1'; -- 2 bytes FFD2-FFD3
-n_internalRam1CS <= '0' when cpuAddress(15 downto 12) = "0000" else '1';
+n_internalRam1CS <= '0' when cpuAddress(15) = '0' else '1';
 n_sdCardCS <= '0' when cpuAddress(15 downto 3) = "1111111111011" else '1'; -- 8 bytes FFD8-FFDF
 
 -- ____________________________________________________________________________________

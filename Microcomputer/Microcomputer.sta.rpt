@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Microcomputer
-Wed Sep 24 17:56:58 2014
+Wed Sep 24 18:08:42 2014
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -124,10 +124,10 @@ agreement for further details.
 +------------+-----------------+--------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name         ; Note ;
 +------------+-----------------+--------------------+------+
-; 36.36 MHz  ; 36.36 MHz       ; clk                ;      ;
-; 55.09 MHz  ; 55.09 MHz       ; cpuClock           ;      ;
-; 161.6 MHz  ; 161.6 MHz       ; sdClock            ;      ;
-; 175.75 MHz ; 175.75 MHz      ; serialClkCount[15] ;      ;
+; 36.64 MHz  ; 36.64 MHz       ; clk                ;      ;
+; 55.26 MHz  ; 55.26 MHz       ; cpuClock           ;      ;
+; 142.67 MHz ; 142.67 MHz      ; sdClock            ;      ;
+; 193.91 MHz ; 193.91 MHz      ; serialClkCount[15] ;      ;
 +------------+-----------------+--------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -143,10 +143,10 @@ HTML report is unavailable in plain text report export.
 +--------------------+---------+---------------+
 ; Clock              ; Slack   ; End Point TNS ;
 +--------------------+---------+---------------+
-; cpuClock           ; -14.027 ; -1827.070     ;
-; clk                ; -13.250 ; -4350.093     ;
-; serialClkCount[15] ; -10.307 ; -349.269      ;
-; sdClock            ; -5.630  ; -655.866      ;
+; cpuClock           ; -14.630 ; -1908.957     ;
+; clk                ; -13.147 ; -7935.431     ;
+; serialClkCount[15] ; -9.799  ; -342.655      ;
+; sdClock            ; -6.102  ; -716.601      ;
 +--------------------+---------+---------------+
 
 
@@ -155,10 +155,10 @@ HTML report is unavailable in plain text report export.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk                ; -4.841 ; -146.786      ;
-; cpuClock           ; -1.923 ; -16.414       ;
-; serialClkCount[15] ; -0.576 ; -6.951        ;
-; sdClock            ; 0.080  ; 0.000         ;
+; clk                ; -4.868 ; -341.765      ;
+; cpuClock           ; -1.943 ; -21.375       ;
+; serialClkCount[15] ; -0.831 ; -8.135        ;
+; sdClock            ; 0.055  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -167,9 +167,9 @@ HTML report is unavailable in plain text report export.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; serialClkCount[15] ; -9.796 ; -257.796      ;
-; sdClock            ; -1.633 ; -21.101       ;
-; cpuClock           ; -0.285 ; -1.125        ;
+; serialClkCount[15] ; -9.684 ; -247.817      ;
+; sdClock            ; -1.596 ; -14.295       ;
+; cpuClock           ; 0.198  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -178,9 +178,9 @@ HTML report is unavailable in plain text report export.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; cpuClock           ; -1.126 ; -4.488        ;
-; serialClkCount[15] ; -0.376 ; -4.060        ;
-; sdClock            ; 0.936  ; 0.000         ;
+; cpuClock           ; -1.872 ; -5.608        ;
+; serialClkCount[15] ; -0.599 ; -5.925        ;
+; sdClock            ; 0.960  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -189,10 +189,10 @@ HTML report is unavailable in plain text report export.
 +--------------------+--------+---------------------+
 ; Clock              ; Slack  ; End Point TNS       ;
 +--------------------+--------+---------------------+
-; clk                ; -3.166 ; -2753.008           ;
-; cpuClock           ; -3.166 ; -328.657            ;
-; serialClkCount[15] ; -3.166 ; -136.493            ;
-; sdClock            ; -0.724 ; -177.453            ;
+; clk                ; -3.166 ; -7004.832           ;
+; cpuClock           ; -3.166 ; -339.592            ;
+; serialClkCount[15] ; -3.166 ; -137.228            ;
+; sdClock            ; -0.724 ; -168.404            ;
 +--------------------+--------+---------------------+
 
 
@@ -201,12 +201,12 @@ HTML report is unavailable in plain text report export.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; n_reset   ; clk        ; 6.015 ; 7.033 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 2.230 ; 2.693 ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 1.462 ; 2.045 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 3.051 ; 3.753 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; 6.689 ; 7.236 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; 8.431 ; 8.878 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; 7.665 ; 8.999 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; 4.090 ; 4.979 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 2.219 ; 2.756 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 3.501 ; 4.088 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; 6.771 ; 7.352 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; 7.865 ; 8.369 ; Rise       ; sdClock         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -215,12 +215,12 @@ HTML report is unavailable in plain text report export.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; n_reset   ; clk        ; -0.428 ; -0.633 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 0.401  ; 0.114  ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 0.152  ; -0.217 ; Fall       ; clk             ;
-; rxd1      ; clk        ; -0.361 ; -0.796 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; -2.180 ; -2.540 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; -3.586 ; -4.059 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; -1.619 ; -2.152 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; -1.291 ; -1.818 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; -0.615 ; -0.976 ; Fall       ; clk             ;
+; rxd1      ; clk        ; -0.538 ; -0.955 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; -2.908 ; -3.075 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; -1.999 ; -2.438 ; Rise       ; sdClock         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -229,51 +229,51 @@ HTML report is unavailable in plain text report export.
 +-----------+--------------------+--------+--------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+--------+--------+------------+--------------------+
-; hSync     ; clk                ; 11.203 ; 11.636 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 10.873 ; 10.483 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 9.870  ; 9.800  ; Fall       ; clk                ;
-; rts1      ; clk                ; 10.419 ; 10.838 ; Fall       ; clk                ;
-; vSync     ; clk                ; 11.832 ; 12.660 ; Fall       ; clk                ;
-; video     ; clk                ; 11.206 ; 11.950 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 10.995 ; 11.574 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 10.867 ; 11.355 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 10.543 ; 10.886 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 10.813 ; 11.444 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 10.907 ; 11.619 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 10.807 ; 11.438 ; Fall       ; clk                ;
-; videoSync ; clk                ; 12.970 ; 13.700 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 8.889  ; 9.212  ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 9.499  ; 9.077  ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 10.528 ; 10.900 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 9.739  ; 10.651 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 8.816  ; 9.441  ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 10.652 ; 11.219 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 11.020 ; 10.832 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 11.026 ; 10.871 ; Fall       ; clk                ;
+; rts1      ; clk                ; 10.374 ; 10.853 ; Fall       ; clk                ;
+; vSync     ; clk                ; 10.234 ; 10.441 ; Fall       ; clk                ;
+; video     ; clk                ; 10.475 ; 10.997 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 10.431 ; 10.895 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 10.556 ; 11.063 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 10.099 ; 10.301 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 10.366 ; 10.757 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 10.148 ; 10.562 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 10.361 ; 10.790 ; Fall       ; clk                ;
+; videoSync ; clk                ; 11.261 ; 11.841 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 8.662  ; 9.000  ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 9.748  ; 9.080  ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 10.101 ; 10.980 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 9.041  ; 9.679  ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 8.169  ; 8.765  ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+--------+--------+------------+--------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                      ;
-+-----------+--------------------+--------+--------+------------+--------------------+
-; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
-+-----------+--------------------+--------+--------+------------+--------------------+
-; hSync     ; clk                ; 10.003 ; 10.282 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 9.477  ; 9.285  ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 8.716  ; 8.724  ; Fall       ; clk                ;
-; rts1      ; clk                ; 9.263  ; 9.506  ; Fall       ; clk                ;
-; vSync     ; clk                ; 10.488 ; 11.003 ; Fall       ; clk                ;
-; video     ; clk                ; 9.927  ; 10.370 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 9.751  ; 10.068 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 9.670  ; 9.992  ; Fall       ; clk                ;
-; videoG0   ; clk                ; 9.378  ; 9.559  ; Fall       ; clk                ;
-; videoG1   ; clk                ; 9.571  ; 9.925  ; Fall       ; clk                ;
-; videoR0   ; clk                ; 9.643  ; 10.058 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 9.567  ; 9.933  ; Fall       ; clk                ;
-; videoSync ; clk                ; 10.809 ; 11.246 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 8.094  ; 8.215  ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 8.471  ; 8.261  ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 8.858  ; 8.935  ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 8.857  ; 9.467  ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 7.590  ; 7.994  ; Fall       ; serialClkCount[15] ;
-+-----------+--------------------+--------+--------+------------+--------------------+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; hSync     ; clk                ; 9.452 ; 9.810 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 9.705 ; 9.659 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 9.743 ; 9.707 ; Fall       ; clk                ;
+; rts1      ; clk                ; 9.187 ; 9.455 ; Fall       ; clk                ;
+; vSync     ; clk                ; 9.116 ; 9.177 ; Fall       ; clk                ;
+; video     ; clk                ; 9.291 ; 9.605 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 9.249 ; 9.524 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 9.351 ; 9.633 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 8.996 ; 9.117 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 9.180 ; 9.372 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 8.981 ; 9.198 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 9.175 ; 9.391 ; Fall       ; clk                ;
+; videoSync ; clk                ; 9.496 ; 9.675 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 7.864 ; 8.044 ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 8.621 ; 8.234 ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 8.852 ; 9.355 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 8.183 ; 8.529 ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 7.053 ; 7.383 ; Fall       ; serialClkCount[15] ;
++-----------+--------------------+-------+-------+------------+--------------------+
 
 
 ----------------------------------------------
@@ -287,10 +287,10 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name         ; Note ;
 +------------+-----------------+--------------------+------+
-; 35.21 MHz  ; 35.21 MHz       ; clk                ;      ;
-; 55.22 MHz  ; 55.22 MHz       ; cpuClock           ;      ;
-; 159.64 MHz ; 159.64 MHz      ; sdClock            ;      ;
-; 178.06 MHz ; 178.06 MHz      ; serialClkCount[15] ;      ;
+; 35.79 MHz  ; 35.79 MHz       ; clk                ;      ;
+; 56.11 MHz  ; 56.11 MHz       ; cpuClock           ;      ;
+; 145.33 MHz ; 145.33 MHz      ; sdClock            ;      ;
+; 192.16 MHz ; 192.16 MHz      ; serialClkCount[15] ;      ;
 +------------+-----------------+--------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -300,10 +300,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------+---------+---------------+
 ; Clock              ; Slack   ; End Point TNS ;
 +--------------------+---------+---------------+
-; cpuClock           ; -14.165 ; -1801.938     ;
-; clk                ; -13.699 ; -4198.601     ;
-; serialClkCount[15] ; -10.268 ; -339.720      ;
-; sdClock            ; -5.662  ; -645.598      ;
+; cpuClock           ; -14.516 ; -1884.897     ;
+; clk                ; -13.471 ; -7372.747     ;
+; serialClkCount[15] ; -9.373  ; -326.686      ;
+; sdClock            ; -6.045  ; -687.421      ;
 +--------------------+---------+---------------+
 
 
@@ -312,10 +312,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk                ; -4.674 ; -225.821      ;
-; cpuClock           ; -1.766 ; -14.165       ;
-; serialClkCount[15] ; -0.596 ; -7.831        ;
-; sdClock            ; 0.044  ; 0.000         ;
+; clk                ; -4.649 ; -671.185      ;
+; cpuClock           ; -1.858 ; -20.676       ;
+; serialClkCount[15] ; -0.769 ; -8.579        ;
+; sdClock            ; 0.152  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -324,9 +324,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; serialClkCount[15] ; -9.525 ; -251.078      ;
-; sdClock            ; -1.585 ; -20.506       ;
-; cpuClock           ; -0.219 ; -0.860        ;
+; serialClkCount[15] ; -9.329 ; -238.409      ;
+; sdClock            ; -1.537 ; -13.769       ;
+; cpuClock           ; 0.125  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -335,9 +335,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; cpuClock           ; -1.021 ; -4.067        ;
-; serialClkCount[15] ; -0.485 ; -6.265        ;
-; sdClock            ; 0.886  ; 0.000         ;
+; cpuClock           ; -1.846 ; -5.529        ;
+; serialClkCount[15] ; -0.708 ; -7.250        ;
+; sdClock            ; 0.906  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -346,10 +346,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------+--------+--------------------+
 ; Clock              ; Slack  ; End Point TNS      ;
 +--------------------+--------+--------------------+
-; clk                ; -3.166 ; -2747.314          ;
-; cpuClock           ; -3.166 ; -327.047           ;
-; serialClkCount[15] ; -3.166 ; -136.505           ;
-; sdClock            ; -0.724 ; -175.440           ;
+; clk                ; -3.166 ; -7000.901          ;
+; cpuClock           ; -3.166 ; -337.045           ;
+; serialClkCount[15] ; -3.166 ; -136.229           ;
+; sdClock            ; -0.724 ; -167.524           ;
 +--------------------+--------+--------------------+
 
 
@@ -358,12 +358,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; n_reset   ; clk        ; 5.539 ; 6.700 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 2.321 ; 2.827 ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 1.215 ; 1.877 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 3.098 ; 3.878 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; 6.682 ; 7.337 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; 8.468 ; 8.919 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; 7.081 ; 8.588 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; 3.905 ; 4.845 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 1.882 ; 2.576 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 3.307 ; 4.147 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; 6.612 ; 7.425 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; 7.694 ; 8.388 ; Rise       ; sdClock         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -372,12 +372,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; n_reset   ; clk        ; -0.154 ; -0.461 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 0.367  ; 0.040  ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 0.286  ; -0.161 ; Fall       ; clk             ;
-; rxd1      ; clk        ; -0.340 ; -0.861 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; -2.157 ; -2.627 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; -3.559 ; -4.196 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; -1.335 ; -2.015 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; -1.035 ; -1.636 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; -0.353 ; -0.879 ; Fall       ; clk             ;
+; rxd1      ; clk        ; -0.520 ; -1.040 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; -2.799 ; -3.163 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; -2.119 ; -2.609 ; Rise       ; sdClock         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -386,51 +386,51 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+--------------------+--------+--------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+--------+--------+------------+--------------------+
-; hSync     ; clk                ; 10.773 ; 11.261 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 10.591 ; 10.175 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 9.515  ; 9.426  ; Fall       ; clk                ;
-; rts1      ; clk                ; 10.101 ; 10.542 ; Fall       ; clk                ;
-; vSync     ; clk                ; 11.422 ; 12.290 ; Fall       ; clk                ;
-; video     ; clk                ; 10.853 ; 11.604 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 10.637 ; 11.245 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 10.545 ; 11.042 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 10.216 ; 10.588 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 10.487 ; 11.121 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 10.583 ; 11.290 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 10.482 ; 11.111 ; Fall       ; clk                ;
-; videoSync ; clk                ; 12.578 ; 13.369 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 8.287  ; 8.666  ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 8.924  ; 8.506  ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 9.882  ; 10.385 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 9.228  ; 10.142 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 8.189  ; 8.810  ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 10.240 ; 10.813 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 10.665 ; 10.439 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 10.688 ; 10.487 ; Fall       ; clk                ;
+; rts1      ; clk                ; 10.040 ; 10.509 ; Fall       ; clk                ;
+; vSync     ; clk                ; 9.919  ; 10.194 ; Fall       ; clk                ;
+; video     ; clk                ; 10.172 ; 10.694 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 10.036 ; 10.512 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 10.133 ; 10.667 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 9.698  ; 9.896  ; Fall       ; clk                ;
+; videoG1   ; clk                ; 9.950  ; 10.370 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 9.771  ; 10.190 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 9.968  ; 10.413 ; Fall       ; clk                ;
+; videoSync ; clk                ; 10.771 ; 11.374 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 8.073  ; 8.427  ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 9.153  ; 8.489  ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 9.450  ; 10.385 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 8.443  ; 9.064  ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 7.751  ; 8.352  ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+--------+--------+------------+--------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                      ;
-+-----------+--------------------+--------+--------+------------+--------------------+
-; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
-+-----------+--------------------+--------+--------+------------+--------------------+
-; hSync     ; clk                ; 9.684  ; 10.047 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 9.332  ; 9.097  ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 8.486  ; 8.464  ; Fall       ; clk                ;
-; rts1      ; clk                ; 9.037  ; 9.316  ; Fall       ; clk                ;
-; vSync     ; clk                ; 10.203 ; 10.788 ; Fall       ; clk                ;
-; video     ; clk                ; 9.703  ; 10.176 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 9.499  ; 9.857  ; Fall       ; clk                ;
-; videoB1   ; clk                ; 9.463  ; 9.818  ; Fall       ; clk                ;
-; videoG0   ; clk                ; 9.171  ; 9.395  ; Fall       ; clk                ;
-; videoG1   ; clk                ; 9.375  ; 9.746  ; Fall       ; clk                ;
-; videoR0   ; clk                ; 9.441  ; 9.872  ; Fall       ; clk                ;
-; videoR1   ; clk                ; 9.373  ; 9.755  ; Fall       ; clk                ;
-; videoSync ; clk                ; 10.381 ; 10.965 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 7.521  ; 7.719  ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 7.947  ; 7.702  ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 8.174  ; 8.405  ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 8.369  ; 9.022  ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 7.102  ; 7.518  ; Fall       ; serialClkCount[15] ;
-+-----------+--------------------+--------+--------+------------+--------------------+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; hSync     ; clk                ; 9.171 ; 9.549 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 9.463 ; 9.358 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 9.512 ; 9.410 ; Fall       ; clk                ;
+; rts1      ; clk                ; 8.961 ; 9.243 ; Fall       ; clk                ;
+; vSync     ; clk                ; 8.897 ; 9.030 ; Fall       ; clk                ;
+; video     ; clk                ; 9.115 ; 9.443 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 8.985 ; 9.283 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 9.052 ; 9.374 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 8.691 ; 8.836 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 8.893 ; 9.124 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 8.733 ; 8.962 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 8.908 ; 9.152 ; Fall       ; clk                ;
+; videoSync ; clk                ; 9.230 ; 9.507 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 7.306 ; 7.519 ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 8.084 ; 7.683 ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 8.275 ; 8.874 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 7.632 ; 7.979 ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 6.758 ; 7.106 ; Fall       ; serialClkCount[15] ;
++-----------+--------------------+-------+-------+------------+--------------------+
 
 
 ---------------------------------------------
@@ -444,10 +444,10 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; cpuClock           ; -5.851 ; -792.959      ;
-; clk                ; -5.805 ; -1630.121     ;
-; serialClkCount[15] ; -4.281 ; -139.843      ;
-; sdClock            ; -2.086 ; -220.411      ;
+; cpuClock           ; -6.387 ; -835.125      ;
+; clk                ; -5.744 ; -3069.454     ;
+; serialClkCount[15] ; -4.131 ; -137.627      ;
+; sdClock            ; -2.445 ; -256.115      ;
 +--------------------+--------+---------------+
 
 
@@ -456,10 +456,10 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk                ; -2.112 ; -147.443      ;
-; cpuClock           ; -0.945 ; -11.222       ;
-; serialClkCount[15] ; -0.432 ; -6.293        ;
-; sdClock            ; -0.095 ; -0.267        ;
+; clk                ; -2.138 ; -406.536      ;
+; cpuClock           ; -1.157 ; -22.168       ;
+; serialClkCount[15] ; -0.560 ; -7.374        ;
+; sdClock            ; -0.096 ; -0.133        ;
 +--------------------+--------+---------------+
 
 
@@ -468,9 +468,9 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; serialClkCount[15] ; -4.088 ; -105.711      ;
-; sdClock            ; -0.238 ; -3.037        ;
-; cpuClock           ; 0.168  ; 0.000         ;
+; serialClkCount[15] ; -4.167 ; -104.987      ;
+; sdClock            ; -0.219 ; -1.958        ;
+; cpuClock           ; 0.699  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -479,9 +479,9 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; cpuClock           ; -0.794 ; -3.172        ;
-; serialClkCount[15] ; -0.473 ; -7.821        ;
-; sdClock            ; 0.314  ; 0.000         ;
+; cpuClock           ; -1.249 ; -3.745        ;
+; serialClkCount[15] ; -0.567 ; -7.777        ;
+; sdClock            ; 0.321  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -490,25 +490,25 @@ No synchronizer chains to report.
 +--------------------+--------+---------------------+
 ; Clock              ; Slack  ; End Point TNS       ;
 +--------------------+--------+---------------------+
-; clk                ; -2.174 ; -1710.057           ;
-; cpuClock           ; -2.174 ; -55.160             ;
-; serialClkCount[15] ; -2.174 ; -53.263             ;
-; sdClock            ; -0.165 ; -3.551              ;
+; clk                ; -2.174 ; -4566.355           ;
+; cpuClock           ; -2.174 ; -61.996             ;
+; serialClkCount[15] ; -2.174 ; -53.547             ;
+; sdClock            ; -0.082 ; -1.089              ;
 +--------------------+--------+---------------------+
 
 
-+------------------------------------------------------------------------+
-; Setup Times                                                            ;
-+-----------+------------+--------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+-------+------------+-----------------+
-; n_reset   ; clk        ; 1.768  ; 3.235 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; -0.010 ; 0.915 ; Fall       ; clk             ;
-; ps2Data   ; clk        ; -0.092 ; 0.921 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 0.409  ; 1.510 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; 2.608  ; 3.737 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; 3.586  ; 4.633 ; Rise       ; sdClock         ;
-+-----------+------------+--------+-------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; n_reset   ; clk        ; 2.770 ; 4.598 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; 1.158 ; 2.436 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 0.347 ; 1.384 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 0.559 ; 1.622 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; 2.623 ; 3.864 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; 3.369 ; 4.445 ; Rise       ; sdClock         ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -516,12 +516,12 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; n_reset   ; clk        ; 0.348  ; -0.498 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 0.881  ; 0.061  ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 0.631  ; -0.255 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 0.512  ; -0.442 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; -0.688 ; -1.563 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; -1.561 ; -2.589 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; -0.111 ; -1.235 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; -0.182 ; -1.283 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 0.170  ; -0.789 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 0.453  ; -0.506 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; -1.041 ; -1.922 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; -0.950 ; -1.897 ; Rise       ; sdClock         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -530,24 +530,24 @@ No synchronizer chains to report.
 +-----------+--------------------+-------+-------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+-------+-------+------------+--------------------+
-; hSync     ; clk                ; 5.880 ; 6.355 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 6.115 ; 5.733 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 5.434 ; 5.286 ; Fall       ; clk                ;
-; rts1      ; clk                ; 5.644 ; 6.021 ; Fall       ; clk                ;
-; vSync     ; clk                ; 6.523 ; 7.270 ; Fall       ; clk                ;
-; video     ; clk                ; 6.219 ; 6.857 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 5.997 ; 6.483 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 5.982 ; 6.438 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 5.787 ; 6.131 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 5.997 ; 6.532 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 5.990 ; 6.570 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 6.004 ; 6.543 ; Fall       ; clk                ;
-; videoSync ; clk                ; 6.881 ; 7.637 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 4.514 ; 4.896 ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 5.044 ; 4.629 ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 5.064 ; 5.540 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 4.974 ; 5.755 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 4.577 ; 5.103 ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 5.883 ; 6.383 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 5.872 ; 5.625 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 5.860 ; 5.619 ; Fall       ; clk                ;
+; rts1      ; clk                ; 5.701 ; 6.122 ; Fall       ; clk                ;
+; vSync     ; clk                ; 5.543 ; 5.793 ; Fall       ; clk                ;
+; video     ; clk                ; 5.821 ; 6.275 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 5.720 ; 6.136 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 5.791 ; 6.241 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 5.495 ; 5.733 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 5.711 ; 6.082 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 5.593 ; 5.961 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 5.711 ; 6.098 ; Fall       ; clk                ;
+; videoSync ; clk                ; 6.172 ; 6.727 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 4.443 ; 4.764 ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 5.267 ; 4.704 ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 5.161 ; 5.946 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 4.669 ; 5.197 ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 4.270 ; 4.766 ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+-------+-------+------------+--------------------+
 
 
@@ -556,24 +556,24 @@ No synchronizer chains to report.
 +-----------+--------------------+-------+-------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+-------+-------+------------+--------------------+
-; hSync     ; clk                ; 5.517 ; 5.921 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 5.619 ; 5.357 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 5.095 ; 4.985 ; Fall       ; clk                ;
-; rts1      ; clk                ; 5.291 ; 5.571 ; Fall       ; clk                ;
-; vSync     ; clk                ; 6.068 ; 6.635 ; Fall       ; clk                ;
-; video     ; clk                ; 5.796 ; 6.263 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 5.585 ; 5.928 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 5.610 ; 5.983 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 5.434 ; 5.699 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 5.599 ; 5.982 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 5.577 ; 5.995 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 5.605 ; 5.999 ; Fall       ; clk                ;
-; videoSync ; clk                ; 5.891 ; 6.405 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 4.130 ; 4.420 ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 4.536 ; 4.212 ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 4.345 ; 4.593 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 4.551 ; 5.188 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 4.092 ; 4.496 ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 5.508 ; 5.893 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 5.457 ; 5.265 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 5.457 ; 5.264 ; Fall       ; clk                ;
+; rts1      ; clk                ; 5.323 ; 5.633 ; Fall       ; clk                ;
+; vSync     ; clk                ; 5.211 ; 5.390 ; Fall       ; clk                ;
+; video     ; clk                ; 5.449 ; 5.788 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 5.357 ; 5.668 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 5.418 ; 5.741 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 5.168 ; 5.371 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 5.347 ; 5.604 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 5.239 ; 5.496 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 5.347 ; 5.617 ; Fall       ; clk                ;
+; videoSync ; clk                ; 5.364 ; 5.579 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 4.051 ; 4.293 ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 4.683 ; 4.281 ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 4.580 ; 5.062 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 4.241 ; 4.609 ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 3.830 ; 4.179 ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+-------+-------+------------+--------------------+
 
 
@@ -588,10 +588,10 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk                ; -5.469 ; -1408.808     ;
-; cpuClock           ; -5.238 ; -700.816      ;
-; serialClkCount[15] ; -3.926 ; -126.551      ;
-; sdClock            ; -1.829 ; -192.243      ;
+; cpuClock           ; -5.609 ; -737.479      ;
+; clk                ; -5.420 ; -2504.367     ;
+; serialClkCount[15] ; -3.723 ; -124.708      ;
+; sdClock            ; -2.184 ; -223.108      ;
 +--------------------+--------+---------------+
 
 
@@ -600,10 +600,10 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk                ; -1.962 ; -178.765      ;
-; cpuClock           ; -0.888 ; -10.393       ;
-; serialClkCount[15] ; -0.411 ; -6.173        ;
-; sdClock            ; -0.124 ; -0.399        ;
+; clk                ; -1.960 ; -577.548      ;
+; cpuClock           ; -1.061 ; -20.684       ;
+; serialClkCount[15] ; -0.545 ; -7.092        ;
+; sdClock            ; -0.069 ; -0.106        ;
 +--------------------+--------+---------------+
 
 
@@ -612,9 +612,9 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; serialClkCount[15] ; -3.651 ; -94.725       ;
-; sdClock            ; -0.193 ; -2.453        ;
-; cpuClock           ; 0.185  ; 0.000         ;
+; serialClkCount[15] ; -3.739 ; -94.182       ;
+; sdClock            ; -0.164 ; -1.465        ;
+; cpuClock           ; 0.665  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -623,9 +623,9 @@ No synchronizer chains to report.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; cpuClock           ; -0.721 ; -2.880        ;
-; serialClkCount[15] ; -0.452 ; -7.978        ;
-; sdClock            ; 0.268  ; 0.000         ;
+; cpuClock           ; -1.178 ; -3.532        ;
+; serialClkCount[15] ; -0.541 ; -7.576        ;
+; sdClock            ; 0.280  ; 0.000         ;
 +--------------------+--------+---------------+
 
 
@@ -634,25 +634,25 @@ No synchronizer chains to report.
 +--------------------+--------+--------------------+
 ; Clock              ; Slack  ; End Point TNS      ;
 +--------------------+--------+--------------------+
-; clk                ; -2.174 ; -1779.712          ;
-; serialClkCount[15] ; -2.174 ; -53.015            ;
-; cpuClock           ; -2.174 ; -46.183            ;
-; sdClock            ; -0.092 ; -0.696             ;
+; clk                ; -2.174 ; -4683.132          ;
+; serialClkCount[15] ; -2.174 ; -53.134            ;
+; cpuClock           ; -2.174 ; -49.707            ;
+; sdClock            ; -0.049 ; -0.437             ;
 +--------------------+--------+--------------------+
 
 
-+------------------------------------------------------------------------+
-; Setup Times                                                            ;
-+-----------+------------+--------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+-------+------------+-----------------+
-; n_reset   ; clk        ; 1.428  ; 2.804 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; -0.082 ; 0.848 ; Fall       ; clk             ;
-; ps2Data   ; clk        ; -0.216 ; 0.786 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 0.263  ; 1.364 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; 2.410  ; 3.545 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; 3.319  ; 4.374 ; Rise       ; sdClock         ;
-+-----------+------------+--------+-------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; n_reset   ; clk        ; 2.304 ; 3.995 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; 0.962 ; 2.195 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 0.167 ; 1.227 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 0.341 ; 1.432 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; 2.376 ; 3.616 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; 3.103 ; 4.190 ; Rise       ; sdClock         ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -660,12 +660,12 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; n_reset   ; clk        ; 0.521  ; -0.397 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 0.925  ; 0.085  ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 0.715  ; -0.187 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 0.615  ; -0.350 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; -0.629 ; -1.542 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; -1.453 ; -2.513 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; 0.122  ; -1.000 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; -0.033 ; -1.113 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 0.311  ; -0.677 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 0.568  ; -0.406 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; -0.926 ; -1.849 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; -0.957 ; -1.903 ; Rise       ; sdClock         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -674,24 +674,24 @@ No synchronizer chains to report.
 +-----------+--------------------+-------+-------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+-------+-------+------------+--------------------+
-; hSync     ; clk                ; 5.489 ; 5.874 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 5.692 ; 5.395 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 5.118 ; 4.997 ; Fall       ; clk                ;
-; rts1      ; clk                ; 5.295 ; 5.600 ; Fall       ; clk                ;
-; vSync     ; clk                ; 6.091 ; 6.672 ; Fall       ; clk                ;
-; video     ; clk                ; 5.823 ; 6.314 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 5.613 ; 6.008 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 5.612 ; 5.969 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 5.441 ; 5.714 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 5.626 ; 6.042 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 5.638 ; 6.090 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 5.637 ; 6.052 ; Fall       ; clk                ;
-; videoSync ; clk                ; 6.418 ; 7.013 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 4.045 ; 4.362 ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 4.526 ; 4.188 ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 4.523 ; 4.950 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 4.491 ; 5.112 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 4.111 ; 4.512 ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 5.536 ; 5.920 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 5.455 ; 5.231 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 5.453 ; 5.239 ; Fall       ; clk                ;
+; rts1      ; clk                ; 5.365 ; 5.693 ; Fall       ; clk                ;
+; vSync     ; clk                ; 5.185 ; 5.404 ; Fall       ; clk                ;
+; video     ; clk                ; 5.473 ; 5.820 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 5.395 ; 5.715 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 5.443 ; 5.796 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 5.186 ; 5.376 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 5.370 ; 5.655 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 5.282 ; 5.560 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 5.373 ; 5.670 ; Fall       ; clk                ;
+; videoSync ; clk                ; 5.767 ; 6.200 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 3.983 ; 4.238 ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 4.680 ; 4.250 ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 4.638 ; 5.257 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 4.201 ; 4.604 ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 3.839 ; 4.224 ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+-------+-------+------------+--------------------+
 
 
@@ -700,24 +700,24 @@ No synchronizer chains to report.
 +-----------+--------------------+-------+-------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+-------+-------+------------+--------------------+
-; hSync     ; clk                ; 5.161 ; 5.487 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 5.266 ; 5.056 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 4.815 ; 4.723 ; Fall       ; clk                ;
-; rts1      ; clk                ; 4.979 ; 5.205 ; Fall       ; clk                ;
-; vSync     ; clk                ; 5.684 ; 6.125 ; Fall       ; clk                ;
-; video     ; clk                ; 5.443 ; 5.802 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 5.245 ; 5.520 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 5.276 ; 5.564 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 5.122 ; 5.329 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 5.266 ; 5.559 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 5.265 ; 5.588 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 5.277 ; 5.574 ; Fall       ; clk                ;
-; videoSync ; clk                ; 5.460 ; 5.896 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 3.687 ; 3.926 ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 4.066 ; 3.803 ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 3.856 ; 4.099 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 4.095 ; 4.597 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 3.672 ; 3.973 ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 5.196 ; 5.485 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 5.080 ; 4.908 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 5.090 ; 4.921 ; Fall       ; clk                ;
+; rts1      ; clk                ; 5.026 ; 5.264 ; Fall       ; clk                ;
+; vSync     ; clk                ; 4.890 ; 5.049 ; Fall       ; clk                ;
+; video     ; clk                ; 5.138 ; 5.391 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 5.065 ; 5.299 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 5.104 ; 5.359 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 4.890 ; 5.053 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 5.038 ; 5.237 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 4.959 ; 5.149 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 5.041 ; 5.247 ; Fall       ; clk                ;
+; videoSync ; clk                ; 5.011 ; 5.214 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 3.619 ; 3.809 ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 4.164 ; 3.857 ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 4.099 ; 4.497 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 3.803 ; 4.080 ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 3.444 ; 3.711 ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+-------+-------+------------+--------------------+
 
 
@@ -727,22 +727,22 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                   ;
-+---------------------+-----------+----------+----------+---------+---------------------+
-; Clock               ; Setup     ; Hold     ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------+-----------+----------+----------+---------+---------------------+
-; Worst-case Slack    ; -14.165   ; -4.841   ; -9.796   ; -1.126  ; -3.166              ;
-;  clk                ; -13.699   ; -4.841   ; N/A      ; N/A     ; -3.166              ;
-;  cpuClock           ; -14.165   ; -1.923   ; -0.285   ; -1.126  ; -3.166              ;
-;  sdClock            ; -5.662    ; -0.124   ; -1.633   ; 0.268   ; -0.724              ;
-;  serialClkCount[15] ; -10.307   ; -0.596   ; -9.796   ; -0.485  ; -3.166              ;
-; Design-wide TNS     ; -7182.298 ; -247.817 ; -280.022 ; -10.993 ; -3395.611           ;
-;  clk                ; -4350.093 ; -225.821 ; N/A      ; N/A     ; -2753.008           ;
-;  cpuClock           ; -1827.070 ; -16.414  ; -1.125   ; -4.488  ; -328.657            ;
-;  sdClock            ; -655.866  ; -0.399   ; -21.101  ; 0.000   ; -177.453            ;
-;  serialClkCount[15] ; -349.269  ; -7.831   ; -257.796 ; -7.978  ; -136.505            ;
-+---------------------+-----------+----------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                    ;
++---------------------+------------+----------+----------+---------+---------------------+
+; Clock               ; Setup      ; Hold     ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------+------------+----------+----------+---------+---------------------+
+; Worst-case Slack    ; -14.630    ; -4.868   ; -9.684   ; -1.872  ; -3.166              ;
+;  clk                ; -13.471    ; -4.868   ; N/A      ; N/A     ; -3.166              ;
+;  cpuClock           ; -14.630    ; -1.943   ; 0.125    ; -1.872  ; -3.166              ;
+;  sdClock            ; -6.102     ; -0.096   ; -1.596   ; 0.280   ; -0.724              ;
+;  serialClkCount[15] ; -9.799     ; -0.831   ; -9.684   ; -0.708  ; -3.166              ;
+; Design-wide TNS     ; -10903.644 ; -700.44  ; -262.112 ; -12.779 ; -7650.056           ;
+;  clk                ; -7935.431  ; -671.185 ; N/A      ; N/A     ; -7004.832           ;
+;  cpuClock           ; -1908.957  ; -22.168  ; 0.000    ; -5.608  ; -339.592            ;
+;  sdClock            ; -716.601   ; -0.133   ; -14.295  ; 0.000   ; -168.404            ;
+;  serialClkCount[15] ; -342.655   ; -8.579   ; -247.817 ; -7.777  ; -137.228            ;
++---------------------+------------+----------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -750,12 +750,12 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; n_reset   ; clk        ; 6.015 ; 7.033 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 2.321 ; 2.827 ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 1.462 ; 2.045 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 3.098 ; 3.878 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; 6.689 ; 7.337 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; 8.468 ; 8.919 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; 7.665 ; 8.999 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; 4.090 ; 4.979 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 2.219 ; 2.756 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 3.501 ; 4.147 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; 6.771 ; 7.425 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; 7.865 ; 8.388 ; Rise       ; sdClock         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -764,12 +764,12 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; n_reset   ; clk        ; 0.521  ; -0.397 ; Fall       ; clk             ;
-; ps2Clk    ; clk        ; 0.925  ; 0.114  ; Fall       ; clk             ;
-; ps2Data   ; clk        ; 0.715  ; -0.161 ; Fall       ; clk             ;
-; rxd1      ; clk        ; 0.615  ; -0.350 ; Fall       ; clk             ;
-; n_reset   ; sdClock    ; -0.629 ; -1.542 ; Rise       ; sdClock         ;
-; sdMISO    ; sdClock    ; -1.453 ; -2.513 ; Rise       ; sdClock         ;
+; n_reset   ; clk        ; 0.122  ; -1.000 ; Fall       ; clk             ;
+; ps2Clk    ; clk        ; -0.033 ; -1.113 ; Fall       ; clk             ;
+; ps2Data   ; clk        ; 0.311  ; -0.677 ; Fall       ; clk             ;
+; rxd1      ; clk        ; 0.568  ; -0.406 ; Fall       ; clk             ;
+; n_reset   ; sdClock    ; -0.926 ; -1.849 ; Rise       ; sdClock         ;
+; sdMISO    ; sdClock    ; -0.950 ; -1.897 ; Rise       ; sdClock         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -778,24 +778,24 @@ No synchronizer chains to report.
 +-----------+--------------------+--------+--------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+--------+--------+------------+--------------------+
-; hSync     ; clk                ; 11.203 ; 11.636 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 10.873 ; 10.483 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 9.870  ; 9.800  ; Fall       ; clk                ;
-; rts1      ; clk                ; 10.419 ; 10.838 ; Fall       ; clk                ;
-; vSync     ; clk                ; 11.832 ; 12.660 ; Fall       ; clk                ;
-; video     ; clk                ; 11.206 ; 11.950 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 10.995 ; 11.574 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 10.867 ; 11.355 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 10.543 ; 10.886 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 10.813 ; 11.444 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 10.907 ; 11.619 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 10.807 ; 11.438 ; Fall       ; clk                ;
-; videoSync ; clk                ; 12.970 ; 13.700 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 8.889  ; 9.212  ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 9.499  ; 9.077  ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 10.528 ; 10.900 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 9.739  ; 10.651 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 8.816  ; 9.441  ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 10.652 ; 11.219 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 11.020 ; 10.832 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 11.026 ; 10.871 ; Fall       ; clk                ;
+; rts1      ; clk                ; 10.374 ; 10.853 ; Fall       ; clk                ;
+; vSync     ; clk                ; 10.234 ; 10.441 ; Fall       ; clk                ;
+; video     ; clk                ; 10.475 ; 10.997 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 10.431 ; 10.895 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 10.556 ; 11.063 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 10.099 ; 10.301 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 10.366 ; 10.757 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 10.148 ; 10.562 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 10.361 ; 10.790 ; Fall       ; clk                ;
+; videoSync ; clk                ; 11.261 ; 11.841 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 8.662  ; 9.000  ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 9.748  ; 9.080  ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 10.101 ; 10.980 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 9.041  ; 9.679  ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 8.169  ; 8.765  ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+--------+--------+------------+--------------------+
 
 
@@ -804,24 +804,24 @@ No synchronizer chains to report.
 +-----------+--------------------+-------+-------+------------+--------------------+
 ; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
 +-----------+--------------------+-------+-------+------------+--------------------+
-; hSync     ; clk                ; 5.161 ; 5.487 ; Fall       ; clk                ;
-; ps2Clk    ; clk                ; 5.266 ; 5.056 ; Fall       ; clk                ;
-; ps2Data   ; clk                ; 4.815 ; 4.723 ; Fall       ; clk                ;
-; rts1      ; clk                ; 4.979 ; 5.205 ; Fall       ; clk                ;
-; vSync     ; clk                ; 5.684 ; 6.125 ; Fall       ; clk                ;
-; video     ; clk                ; 5.443 ; 5.802 ; Fall       ; clk                ;
-; videoB0   ; clk                ; 5.245 ; 5.520 ; Fall       ; clk                ;
-; videoB1   ; clk                ; 5.276 ; 5.564 ; Fall       ; clk                ;
-; videoG0   ; clk                ; 5.122 ; 5.329 ; Fall       ; clk                ;
-; videoG1   ; clk                ; 5.266 ; 5.559 ; Fall       ; clk                ;
-; videoR0   ; clk                ; 5.265 ; 5.588 ; Fall       ; clk                ;
-; videoR1   ; clk                ; 5.277 ; 5.574 ; Fall       ; clk                ;
-; videoSync ; clk                ; 5.460 ; 5.896 ; Fall       ; clk                ;
-; driveLED  ; sdClock            ; 3.687 ; 3.926 ; Rise       ; sdClock            ;
-; sdCS      ; sdClock            ; 4.066 ; 3.803 ; Rise       ; sdClock            ;
-; sdMOSI    ; sdClock            ; 3.856 ; 4.099 ; Rise       ; sdClock            ;
-; sdSCLK    ; sdClock            ; 4.095 ; 4.597 ; Rise       ; sdClock            ;
-; txd1      ; serialClkCount[15] ; 3.672 ; 3.973 ; Fall       ; serialClkCount[15] ;
+; hSync     ; clk                ; 5.196 ; 5.485 ; Fall       ; clk                ;
+; ps2Clk    ; clk                ; 5.080 ; 4.908 ; Fall       ; clk                ;
+; ps2Data   ; clk                ; 5.090 ; 4.921 ; Fall       ; clk                ;
+; rts1      ; clk                ; 5.026 ; 5.264 ; Fall       ; clk                ;
+; vSync     ; clk                ; 4.890 ; 5.049 ; Fall       ; clk                ;
+; video     ; clk                ; 5.138 ; 5.391 ; Fall       ; clk                ;
+; videoB0   ; clk                ; 5.065 ; 5.299 ; Fall       ; clk                ;
+; videoB1   ; clk                ; 5.104 ; 5.359 ; Fall       ; clk                ;
+; videoG0   ; clk                ; 4.890 ; 5.053 ; Fall       ; clk                ;
+; videoG1   ; clk                ; 5.038 ; 5.237 ; Fall       ; clk                ;
+; videoR0   ; clk                ; 4.959 ; 5.149 ; Fall       ; clk                ;
+; videoR1   ; clk                ; 5.041 ; 5.247 ; Fall       ; clk                ;
+; videoSync ; clk                ; 5.011 ; 5.214 ; Fall       ; clk                ;
+; driveLED  ; sdClock            ; 3.619 ; 3.809 ; Rise       ; sdClock            ;
+; sdCS      ; sdClock            ; 4.164 ; 3.857 ; Rise       ; sdClock            ;
+; sdMOSI    ; sdClock            ; 4.099 ; 4.497 ; Rise       ; sdClock            ;
+; sdSCLK    ; sdClock            ; 3.803 ; 4.080 ; Rise       ; sdClock            ;
+; txd1      ; serialClkCount[15] ; 3.444 ; 3.711 ; Fall       ; serialClkCount[15] ;
 +-----------+--------------------+-------+-------+------------+--------------------+
 
 
@@ -985,15 +985,15 @@ No synchronizer chains to report.
 +--------------------+--------------------+----------+----------+----------+----------+
 ; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------+--------------------+----------+----------+----------+----------+
-; clk                ; clk                ; 1206     ; 17170943 ; 247      ; 37954    ;
-; cpuClock           ; clk                ; 3492     ; 4        ; 8003     ; 96       ;
+; clk                ; clk                ; 1349     ; 17170943 ; 247      ; 39593    ;
+; cpuClock           ; clk                ; 16170    ; 32       ; 8003     ; 96       ;
 ; serialClkCount[15] ; clk                ; 1        ; 1        ; 0        ; 87       ;
-; clk                ; cpuClock           ; 216      ; 9        ; 0        ; 73       ;
-; cpuClock           ; cpuClock           ; 213670   ; 216      ; 410      ; 136      ;
+; clk                ; cpuClock           ; 756      ; 9        ; 0        ; 73       ;
+; cpuClock           ; cpuClock           ; 216550   ; 216      ; 426      ; 137      ;
 ; sdClock            ; cpuClock           ; 164      ; 0        ; 0        ; 0        ;
 ; serialClkCount[15] ; cpuClock           ; 0        ; 1        ; 0        ; 34       ;
 ; cpuClock           ; sdClock            ; 135      ; 0        ; 0        ; 0        ;
-; sdClock            ; sdClock            ; 4552     ; 0        ; 0        ; 0        ;
+; sdClock            ; sdClock            ; 4484     ; 0        ; 0        ; 0        ;
 ; clk                ; serialClkCount[15] ; 0        ; 0        ; 0        ; 14       ;
 ; cpuClock           ; serialClkCount[15] ; 0        ; 0        ; 5729     ; 22       ;
 ; serialClkCount[15] ; serialClkCount[15] ; 0        ; 0        ; 0        ; 608      ;
@@ -1006,15 +1006,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------+--------------------+----------+----------+----------+----------+
 ; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------+--------------------+----------+----------+----------+----------+
-; clk                ; clk                ; 1206     ; 17170943 ; 247      ; 37954    ;
-; cpuClock           ; clk                ; 3492     ; 4        ; 8003     ; 96       ;
+; clk                ; clk                ; 1349     ; 17170943 ; 247      ; 39593    ;
+; cpuClock           ; clk                ; 16170    ; 32       ; 8003     ; 96       ;
 ; serialClkCount[15] ; clk                ; 1        ; 1        ; 0        ; 87       ;
-; clk                ; cpuClock           ; 216      ; 9        ; 0        ; 73       ;
-; cpuClock           ; cpuClock           ; 213670   ; 216      ; 410      ; 136      ;
+; clk                ; cpuClock           ; 756      ; 9        ; 0        ; 73       ;
+; cpuClock           ; cpuClock           ; 216550   ; 216      ; 426      ; 137      ;
 ; sdClock            ; cpuClock           ; 164      ; 0        ; 0        ; 0        ;
 ; serialClkCount[15] ; cpuClock           ; 0        ; 1        ; 0        ; 34       ;
 ; cpuClock           ; sdClock            ; 135      ; 0        ; 0        ; 0        ;
-; sdClock            ; sdClock            ; 4552     ; 0        ; 0        ; 0        ;
+; sdClock            ; sdClock            ; 4484     ; 0        ; 0        ; 0        ;
 ; clk                ; serialClkCount[15] ; 0        ; 0        ; 0        ; 14       ;
 ; cpuClock           ; serialClkCount[15] ; 0        ; 0        ; 5729     ; 22       ;
 ; serialClkCount[15] ; serialClkCount[15] ; 0        ; 0        ; 0        ; 608      ;
@@ -1027,8 +1027,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+--------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+--------------------+----------+----------+----------+----------+
-; sdClock    ; cpuClock           ; 8        ; 0        ; 0        ; 0        ;
-; sdClock    ; sdClock            ; 26       ; 0        ; 0        ; 0        ;
+; sdClock    ; cpuClock           ; 6        ; 0        ; 0        ; 0        ;
+; sdClock    ; sdClock            ; 18       ; 0        ; 0        ; 0        ;
 ; cpuClock   ; serialClkCount[15] ; 0        ; 0        ; 6993     ; 27       ;
 +------------+--------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -1039,8 +1039,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+--------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+--------------------+----------+----------+----------+----------+
-; sdClock    ; cpuClock           ; 8        ; 0        ; 0        ; 0        ;
-; sdClock    ; sdClock            ; 26       ; 0        ; 0        ; 0        ;
+; sdClock    ; cpuClock           ; 6        ; 0        ; 0        ; 0        ;
+; sdClock    ; sdClock            ; 18       ; 0        ; 0        ; 0        ;
 ; cpuClock   ; serialClkCount[15] ; 0        ; 0        ; 6993     ; 27       ;
 +------------+--------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -1078,7 +1078,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Wed Sep 24 17:56:16 2014
+    Info: Processing started: Wed Sep 24 18:07:49 2014
 Info: Command: quartus_sta Microcomputer -c Microcomputer
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1089,168 +1089,168 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name cpuClock cpuClock
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name serialClkCount[15] serialClkCount[15]
     Info (332105): create_clock -period 1.000 -name sdClock sdClock
+    Info (332105): create_clock -period 1.000 -name serialClkCount[15] serialClkCount[15]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -14.027
+Info (332146): Worst-case setup slack is -14.630
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.027           -1827.070 cpuClock 
-    Info (332119):   -13.250           -4350.093 clk 
-    Info (332119):   -10.307            -349.269 serialClkCount[15] 
-    Info (332119):    -5.630            -655.866 sdClock 
-Info (332146): Worst-case hold slack is -4.841
+    Info (332119):   -14.630           -1908.957 cpuClock 
+    Info (332119):   -13.147           -7935.431 clk 
+    Info (332119):    -9.799            -342.655 serialClkCount[15] 
+    Info (332119):    -6.102            -716.601 sdClock 
+Info (332146): Worst-case hold slack is -4.868
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.841            -146.786 clk 
-    Info (332119):    -1.923             -16.414 cpuClock 
-    Info (332119):    -0.576              -6.951 serialClkCount[15] 
-    Info (332119):     0.080               0.000 sdClock 
-Info (332146): Worst-case recovery slack is -9.796
+    Info (332119):    -4.868            -341.765 clk 
+    Info (332119):    -1.943             -21.375 cpuClock 
+    Info (332119):    -0.831              -8.135 serialClkCount[15] 
+    Info (332119):     0.055               0.000 sdClock 
+Info (332146): Worst-case recovery slack is -9.684
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.796            -257.796 serialClkCount[15] 
-    Info (332119):    -1.633             -21.101 sdClock 
-    Info (332119):    -0.285              -1.125 cpuClock 
-Info (332146): Worst-case removal slack is -1.126
+    Info (332119):    -9.684            -247.817 serialClkCount[15] 
+    Info (332119):    -1.596             -14.295 sdClock 
+    Info (332119):     0.198               0.000 cpuClock 
+Info (332146): Worst-case removal slack is -1.872
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.126              -4.488 cpuClock 
-    Info (332119):    -0.376              -4.060 serialClkCount[15] 
-    Info (332119):     0.936               0.000 sdClock 
+    Info (332119):    -1.872              -5.608 cpuClock 
+    Info (332119):    -0.599              -5.925 serialClkCount[15] 
+    Info (332119):     0.960               0.000 sdClock 
 Info (332146): Worst-case minimum pulse width slack is -3.166
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.166           -2753.008 clk 
-    Info (332119):    -3.166            -328.657 cpuClock 
-    Info (332119):    -3.166            -136.493 serialClkCount[15] 
-    Info (332119):    -0.724            -177.453 sdClock 
+    Info (332119):    -3.166           -7004.832 clk 
+    Info (332119):    -3.166            -339.592 cpuClock 
+    Info (332119):    -3.166            -137.228 serialClkCount[15] 
+    Info (332119):    -0.724            -168.404 sdClock 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -14.165
+Info (332146): Worst-case setup slack is -14.516
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.165           -1801.938 cpuClock 
-    Info (332119):   -13.699           -4198.601 clk 
-    Info (332119):   -10.268            -339.720 serialClkCount[15] 
-    Info (332119):    -5.662            -645.598 sdClock 
-Info (332146): Worst-case hold slack is -4.674
+    Info (332119):   -14.516           -1884.897 cpuClock 
+    Info (332119):   -13.471           -7372.747 clk 
+    Info (332119):    -9.373            -326.686 serialClkCount[15] 
+    Info (332119):    -6.045            -687.421 sdClock 
+Info (332146): Worst-case hold slack is -4.649
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.674            -225.821 clk 
-    Info (332119):    -1.766             -14.165 cpuClock 
-    Info (332119):    -0.596              -7.831 serialClkCount[15] 
-    Info (332119):     0.044               0.000 sdClock 
-Info (332146): Worst-case recovery slack is -9.525
+    Info (332119):    -4.649            -671.185 clk 
+    Info (332119):    -1.858             -20.676 cpuClock 
+    Info (332119):    -0.769              -8.579 serialClkCount[15] 
+    Info (332119):     0.152               0.000 sdClock 
+Info (332146): Worst-case recovery slack is -9.329
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.525            -251.078 serialClkCount[15] 
-    Info (332119):    -1.585             -20.506 sdClock 
-    Info (332119):    -0.219              -0.860 cpuClock 
-Info (332146): Worst-case removal slack is -1.021
+    Info (332119):    -9.329            -238.409 serialClkCount[15] 
+    Info (332119):    -1.537             -13.769 sdClock 
+    Info (332119):     0.125               0.000 cpuClock 
+Info (332146): Worst-case removal slack is -1.846
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.021              -4.067 cpuClock 
-    Info (332119):    -0.485              -6.265 serialClkCount[15] 
-    Info (332119):     0.886               0.000 sdClock 
+    Info (332119):    -1.846              -5.529 cpuClock 
+    Info (332119):    -0.708              -7.250 serialClkCount[15] 
+    Info (332119):     0.906               0.000 sdClock 
 Info (332146): Worst-case minimum pulse width slack is -3.166
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.166           -2747.314 clk 
-    Info (332119):    -3.166            -327.047 cpuClock 
-    Info (332119):    -3.166            -136.505 serialClkCount[15] 
-    Info (332119):    -0.724            -175.440 sdClock 
+    Info (332119):    -3.166           -7000.901 clk 
+    Info (332119):    -3.166            -337.045 cpuClock 
+    Info (332119):    -3.166            -136.229 serialClkCount[15] 
+    Info (332119):    -0.724            -167.524 sdClock 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.851
+Info (332146): Worst-case setup slack is -6.387
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.851            -792.959 cpuClock 
-    Info (332119):    -5.805           -1630.121 clk 
-    Info (332119):    -4.281            -139.843 serialClkCount[15] 
-    Info (332119):    -2.086            -220.411 sdClock 
-Info (332146): Worst-case hold slack is -2.112
+    Info (332119):    -6.387            -835.125 cpuClock 
+    Info (332119):    -5.744           -3069.454 clk 
+    Info (332119):    -4.131            -137.627 serialClkCount[15] 
+    Info (332119):    -2.445            -256.115 sdClock 
+Info (332146): Worst-case hold slack is -2.138
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.112            -147.443 clk 
-    Info (332119):    -0.945             -11.222 cpuClock 
-    Info (332119):    -0.432              -6.293 serialClkCount[15] 
-    Info (332119):    -0.095              -0.267 sdClock 
-Info (332146): Worst-case recovery slack is -4.088
+    Info (332119):    -2.138            -406.536 clk 
+    Info (332119):    -1.157             -22.168 cpuClock 
+    Info (332119):    -0.560              -7.374 serialClkCount[15] 
+    Info (332119):    -0.096              -0.133 sdClock 
+Info (332146): Worst-case recovery slack is -4.167
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.088            -105.711 serialClkCount[15] 
-    Info (332119):    -0.238              -3.037 sdClock 
-    Info (332119):     0.168               0.000 cpuClock 
-Info (332146): Worst-case removal slack is -0.794
+    Info (332119):    -4.167            -104.987 serialClkCount[15] 
+    Info (332119):    -0.219              -1.958 sdClock 
+    Info (332119):     0.699               0.000 cpuClock 
+Info (332146): Worst-case removal slack is -1.249
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.794              -3.172 cpuClock 
-    Info (332119):    -0.473              -7.821 serialClkCount[15] 
-    Info (332119):     0.314               0.000 sdClock 
+    Info (332119):    -1.249              -3.745 cpuClock 
+    Info (332119):    -0.567              -7.777 serialClkCount[15] 
+    Info (332119):     0.321               0.000 sdClock 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174           -1710.057 clk 
-    Info (332119):    -2.174             -55.160 cpuClock 
-    Info (332119):    -2.174             -53.263 serialClkCount[15] 
-    Info (332119):    -0.165              -3.551 sdClock 
+    Info (332119):    -2.174           -4566.355 clk 
+    Info (332119):    -2.174             -61.996 cpuClock 
+    Info (332119):    -2.174             -53.547 serialClkCount[15] 
+    Info (332119):    -0.082              -1.089 sdClock 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.469
+Info (332146): Worst-case setup slack is -5.609
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.469           -1408.808 clk 
-    Info (332119):    -5.238            -700.816 cpuClock 
-    Info (332119):    -3.926            -126.551 serialClkCount[15] 
-    Info (332119):    -1.829            -192.243 sdClock 
-Info (332146): Worst-case hold slack is -1.962
+    Info (332119):    -5.609            -737.479 cpuClock 
+    Info (332119):    -5.420           -2504.367 clk 
+    Info (332119):    -3.723            -124.708 serialClkCount[15] 
+    Info (332119):    -2.184            -223.108 sdClock 
+Info (332146): Worst-case hold slack is -1.960
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.962            -178.765 clk 
-    Info (332119):    -0.888             -10.393 cpuClock 
-    Info (332119):    -0.411              -6.173 serialClkCount[15] 
-    Info (332119):    -0.124              -0.399 sdClock 
-Info (332146): Worst-case recovery slack is -3.651
+    Info (332119):    -1.960            -577.548 clk 
+    Info (332119):    -1.061             -20.684 cpuClock 
+    Info (332119):    -0.545              -7.092 serialClkCount[15] 
+    Info (332119):    -0.069              -0.106 sdClock 
+Info (332146): Worst-case recovery slack is -3.739
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.651             -94.725 serialClkCount[15] 
-    Info (332119):    -0.193              -2.453 sdClock 
-    Info (332119):     0.185               0.000 cpuClock 
-Info (332146): Worst-case removal slack is -0.721
+    Info (332119):    -3.739             -94.182 serialClkCount[15] 
+    Info (332119):    -0.164              -1.465 sdClock 
+    Info (332119):     0.665               0.000 cpuClock 
+Info (332146): Worst-case removal slack is -1.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.721              -2.880 cpuClock 
-    Info (332119):    -0.452              -7.978 serialClkCount[15] 
-    Info (332119):     0.268               0.000 sdClock 
+    Info (332119):    -1.178              -3.532 cpuClock 
+    Info (332119):    -0.541              -7.576 serialClkCount[15] 
+    Info (332119):     0.280               0.000 sdClock 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174           -1779.712 clk 
-    Info (332119):    -2.174             -53.015 serialClkCount[15] 
-    Info (332119):    -2.174             -46.183 cpuClock 
-    Info (332119):    -0.092              -0.696 sdClock 
+    Info (332119):    -2.174           -4683.132 clk 
+    Info (332119):    -2.174             -53.134 serialClkCount[15] 
+    Info (332119):    -2.174             -49.707 cpuClock 
+    Info (332119):    -0.049              -0.437 sdClock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1044 megabytes
-    Info: Processing ended: Wed Sep 24 17:56:58 2014
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 1058 megabytes
+    Info: Processing ended: Wed Sep 24 18:08:42 2014
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:00:41
 
 

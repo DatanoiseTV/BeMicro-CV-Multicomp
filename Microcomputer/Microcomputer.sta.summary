@@ -3,291 +3,291 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'cpuClock'
-Slack : -14.027
-TNS   : -1827.070
+Slack : -14.630
+TNS   : -1908.957
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -13.250
-TNS   : -4350.093
+Slack : -13.147
+TNS   : -7935.431
 
 Type  : Slow 1100mV 85C Model Setup 'serialClkCount[15]'
-Slack : -10.307
-TNS   : -349.269
+Slack : -9.799
+TNS   : -342.655
 
 Type  : Slow 1100mV 85C Model Setup 'sdClock'
-Slack : -5.630
-TNS   : -655.866
+Slack : -6.102
+TNS   : -716.601
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -4.841
-TNS   : -146.786
+Slack : -4.868
+TNS   : -341.765
 
 Type  : Slow 1100mV 85C Model Hold 'cpuClock'
-Slack : -1.923
-TNS   : -16.414
+Slack : -1.943
+TNS   : -21.375
 
 Type  : Slow 1100mV 85C Model Hold 'serialClkCount[15]'
-Slack : -0.576
-TNS   : -6.951
+Slack : -0.831
+TNS   : -8.135
 
 Type  : Slow 1100mV 85C Model Hold 'sdClock'
-Slack : 0.080
+Slack : 0.055
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'serialClkCount[15]'
-Slack : -9.796
-TNS   : -257.796
+Slack : -9.684
+TNS   : -247.817
 
 Type  : Slow 1100mV 85C Model Recovery 'sdClock'
-Slack : -1.633
-TNS   : -21.101
+Slack : -1.596
+TNS   : -14.295
 
 Type  : Slow 1100mV 85C Model Recovery 'cpuClock'
-Slack : -0.285
-TNS   : -1.125
+Slack : 0.198
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'cpuClock'
-Slack : -1.126
-TNS   : -4.488
+Slack : -1.872
+TNS   : -5.608
 
 Type  : Slow 1100mV 85C Model Removal 'serialClkCount[15]'
-Slack : -0.376
-TNS   : -4.060
+Slack : -0.599
+TNS   : -5.925
 
 Type  : Slow 1100mV 85C Model Removal 'sdClock'
-Slack : 0.936
+Slack : 0.960
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.166
-TNS   : -2753.008
+TNS   : -7004.832
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'cpuClock'
 Slack : -3.166
-TNS   : -328.657
+TNS   : -339.592
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'serialClkCount[15]'
 Slack : -3.166
-TNS   : -136.493
+TNS   : -137.228
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'sdClock'
 Slack : -0.724
-TNS   : -177.453
+TNS   : -168.404
 
 Type  : Slow 1100mV 0C Model Setup 'cpuClock'
-Slack : -14.165
-TNS   : -1801.938
+Slack : -14.516
+TNS   : -1884.897
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -13.699
-TNS   : -4198.601
+Slack : -13.471
+TNS   : -7372.747
 
 Type  : Slow 1100mV 0C Model Setup 'serialClkCount[15]'
-Slack : -10.268
-TNS   : -339.720
+Slack : -9.373
+TNS   : -326.686
 
 Type  : Slow 1100mV 0C Model Setup 'sdClock'
-Slack : -5.662
-TNS   : -645.598
+Slack : -6.045
+TNS   : -687.421
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -4.674
-TNS   : -225.821
+Slack : -4.649
+TNS   : -671.185
 
 Type  : Slow 1100mV 0C Model Hold 'cpuClock'
-Slack : -1.766
-TNS   : -14.165
+Slack : -1.858
+TNS   : -20.676
 
 Type  : Slow 1100mV 0C Model Hold 'serialClkCount[15]'
-Slack : -0.596
-TNS   : -7.831
+Slack : -0.769
+TNS   : -8.579
 
 Type  : Slow 1100mV 0C Model Hold 'sdClock'
-Slack : 0.044
+Slack : 0.152
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'serialClkCount[15]'
-Slack : -9.525
-TNS   : -251.078
+Slack : -9.329
+TNS   : -238.409
 
 Type  : Slow 1100mV 0C Model Recovery 'sdClock'
-Slack : -1.585
-TNS   : -20.506
+Slack : -1.537
+TNS   : -13.769
 
 Type  : Slow 1100mV 0C Model Recovery 'cpuClock'
-Slack : -0.219
-TNS   : -0.860
+Slack : 0.125
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'cpuClock'
-Slack : -1.021
-TNS   : -4.067
+Slack : -1.846
+TNS   : -5.529
 
 Type  : Slow 1100mV 0C Model Removal 'serialClkCount[15]'
-Slack : -0.485
-TNS   : -6.265
+Slack : -0.708
+TNS   : -7.250
 
 Type  : Slow 1100mV 0C Model Removal 'sdClock'
-Slack : 0.886
+Slack : 0.906
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.166
-TNS   : -2747.314
+TNS   : -7000.901
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'cpuClock'
 Slack : -3.166
-TNS   : -327.047
+TNS   : -337.045
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'serialClkCount[15]'
 Slack : -3.166
-TNS   : -136.505
+TNS   : -136.229
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'sdClock'
 Slack : -0.724
-TNS   : -175.440
+TNS   : -167.524
 
 Type  : Fast 1100mV 85C Model Setup 'cpuClock'
-Slack : -5.851
-TNS   : -792.959
+Slack : -6.387
+TNS   : -835.125
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -5.805
-TNS   : -1630.121
+Slack : -5.744
+TNS   : -3069.454
 
 Type  : Fast 1100mV 85C Model Setup 'serialClkCount[15]'
-Slack : -4.281
-TNS   : -139.843
+Slack : -4.131
+TNS   : -137.627
 
 Type  : Fast 1100mV 85C Model Setup 'sdClock'
-Slack : -2.086
-TNS   : -220.411
+Slack : -2.445
+TNS   : -256.115
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -2.112
-TNS   : -147.443
+Slack : -2.138
+TNS   : -406.536
 
 Type  : Fast 1100mV 85C Model Hold 'cpuClock'
-Slack : -0.945
-TNS   : -11.222
+Slack : -1.157
+TNS   : -22.168
 
 Type  : Fast 1100mV 85C Model Hold 'serialClkCount[15]'
-Slack : -0.432
-TNS   : -6.293
+Slack : -0.560
+TNS   : -7.374
 
 Type  : Fast 1100mV 85C Model Hold 'sdClock'
-Slack : -0.095
-TNS   : -0.267
+Slack : -0.096
+TNS   : -0.133
 
 Type  : Fast 1100mV 85C Model Recovery 'serialClkCount[15]'
-Slack : -4.088
-TNS   : -105.711
+Slack : -4.167
+TNS   : -104.987
 
 Type  : Fast 1100mV 85C Model Recovery 'sdClock'
-Slack : -0.238
-TNS   : -3.037
+Slack : -0.219
+TNS   : -1.958
 
 Type  : Fast 1100mV 85C Model Recovery 'cpuClock'
-Slack : 0.168
+Slack : 0.699
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'cpuClock'
-Slack : -0.794
-TNS   : -3.172
+Slack : -1.249
+TNS   : -3.745
 
 Type  : Fast 1100mV 85C Model Removal 'serialClkCount[15]'
-Slack : -0.473
-TNS   : -7.821
+Slack : -0.567
+TNS   : -7.777
 
 Type  : Fast 1100mV 85C Model Removal 'sdClock'
-Slack : 0.314
+Slack : 0.321
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -2.174
-TNS   : -1710.057
+TNS   : -4566.355
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'cpuClock'
 Slack : -2.174
-TNS   : -55.160
+TNS   : -61.996
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'serialClkCount[15]'
 Slack : -2.174
-TNS   : -53.263
+TNS   : -53.547
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'sdClock'
-Slack : -0.165
-TNS   : -3.551
-
-Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -5.469
-TNS   : -1408.808
+Slack : -0.082
+TNS   : -1.089
 
 Type  : Fast 1100mV 0C Model Setup 'cpuClock'
-Slack : -5.238
-TNS   : -700.816
+Slack : -5.609
+TNS   : -737.479
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -5.420
+TNS   : -2504.367
 
 Type  : Fast 1100mV 0C Model Setup 'serialClkCount[15]'
-Slack : -3.926
-TNS   : -126.551
+Slack : -3.723
+TNS   : -124.708
 
 Type  : Fast 1100mV 0C Model Setup 'sdClock'
-Slack : -1.829
-TNS   : -192.243
+Slack : -2.184
+TNS   : -223.108
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -1.962
-TNS   : -178.765
+Slack : -1.960
+TNS   : -577.548
 
 Type  : Fast 1100mV 0C Model Hold 'cpuClock'
-Slack : -0.888
-TNS   : -10.393
+Slack : -1.061
+TNS   : -20.684
 
 Type  : Fast 1100mV 0C Model Hold 'serialClkCount[15]'
-Slack : -0.411
-TNS   : -6.173
+Slack : -0.545
+TNS   : -7.092
 
 Type  : Fast 1100mV 0C Model Hold 'sdClock'
-Slack : -0.124
-TNS   : -0.399
+Slack : -0.069
+TNS   : -0.106
 
 Type  : Fast 1100mV 0C Model Recovery 'serialClkCount[15]'
-Slack : -3.651
-TNS   : -94.725
+Slack : -3.739
+TNS   : -94.182
 
 Type  : Fast 1100mV 0C Model Recovery 'sdClock'
-Slack : -0.193
-TNS   : -2.453
+Slack : -0.164
+TNS   : -1.465
 
 Type  : Fast 1100mV 0C Model Recovery 'cpuClock'
-Slack : 0.185
+Slack : 0.665
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'cpuClock'
-Slack : -0.721
-TNS   : -2.880
+Slack : -1.178
+TNS   : -3.532
 
 Type  : Fast 1100mV 0C Model Removal 'serialClkCount[15]'
-Slack : -0.452
-TNS   : -7.978
+Slack : -0.541
+TNS   : -7.576
 
 Type  : Fast 1100mV 0C Model Removal 'sdClock'
-Slack : 0.268
+Slack : 0.280
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -2.174
-TNS   : -1779.712
+TNS   : -4683.132
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'serialClkCount[15]'
 Slack : -2.174
-TNS   : -53.015
+TNS   : -53.134
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'cpuClock'
 Slack : -2.174
-TNS   : -46.183
+TNS   : -49.707
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'sdClock'
-Slack : -0.092
-TNS   : -0.696
+Slack : -0.049
+TNS   : -0.437
 
 ------------------------------------------------------------
