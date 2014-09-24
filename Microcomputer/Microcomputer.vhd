@@ -166,6 +166,35 @@ n_dcd => '0',
 n_rts => rts1
 );
 
+io2 : entity work.SBCTextDisplayRGB
+port map (
+n_reset => n_reset,
+clk => clk,
+
+-- RGB video signals
+hSync => hSync,
+vSync => vSync,
+videoR0 => videoR0,
+videoR1 => videoR1,
+videoG0 => videoG0,
+videoG1 => videoG1,
+videoB0 => videoB0,
+videoB1 => videoB1,
+
+-- Monochrome video signals (when using TV timings only)
+sync => videoSync,
+video => video,
+
+n_wr => n_interface2CS or cpuClock or n_WR,
+n_rd => n_interface2CS or cpuClock or (not n_WR),
+n_int => n_int1,
+regSel => cpuAddress(0),
+dataIn => cpuDataOut,
+dataOut => interface2DataOut,
+ps2Clk => ps2Clk,
+ps2Data => ps2Data
+);
+
 sd1 : entity work.sd_controller 
 port map(
 sdCS => sdCS,
@@ -192,6 +221,8 @@ n_memWR <= not(cpuClock) nand (not n_WR);
 -- CHIP SELECTS GO HERE
 
 n_basRomCS <= '0' when cpuAddress(15 downto 13) = "111" else '1'; --8K at top of memory
+n_interface1CS <= '0' when cpuAddress(15 downto 1) = "111111111101000" else '1'; -- 2 bytes FFD0-FFD1
+n_interface2CS <= '0' when cpuAddress(15 downto 1) = "111111111101001" else '1'; -- 2 bytes FFD2-FFD3
 n_internalRam1CS <= '0' when cpuAddress(15 downto 12) = "0000" else '1';
 n_sdCardCS <= '0' when cpuAddress(15 downto 3) = "1111111111011" else '1'; -- 8 bytes FFD8-FFDF
 
