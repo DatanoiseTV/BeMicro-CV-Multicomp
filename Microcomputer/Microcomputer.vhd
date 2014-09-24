@@ -107,25 +107,147 @@ begin
 -- ____________________________________________________________________________________
 -- CPU CHOICE GOES HERE
 
+cpu1 : entity work.T65
+port map(
+Enable => '1',
+Mode => "00",
+Res_n => n_reset,
+Clk => cpuClock,
+Rdy => '1',
+Abort_n => '1',
+IRQ_n => '1',
+NMI_n => '1',
+SO_n => '1',
+R_W_n => n_WR,
+A(15 downto 0) => cpuAddress,
+DI => cpuDataIn,
+DO => cpuDataOut);
+
 -- ____________________________________________________________________________________
 -- ROM GOES HERE	
+	
+rom1 : entity work.M6502_BASIC_ROM -- 8KB BASIC
+port map(
+address => cpuAddress(12 downto 0),
+clock => clk,
+q => basRomData
+);	
 	
 -- ____________________________________________________________________________________
 -- RAM GOES HERE
 
+ram1: entity work.InternalRam4K
+port map
+(
+address => cpuAddress(11 downto 0),
+clock => clk,
+data => cpuDataOut,
+wren => not(n_memWR or n_internalRam1CS),
+q => internalRam1DataOut
+);
+
 -- ____________________________________________________________________________________
 -- INPUT/OUTPUT DEVICES GO HERE	
+io1 : entity work.bufferedUART
+port map(
+clk => clk,
+n_wr => n_interface1CS or cpuClock or n_WR,
+n_rd => n_interface1CS or cpuClock or (not n_WR),
+n_int => n_int1,
+regSel => cpuAddress(0),
+dataIn => cpuDataOut,
+dataOut => interface1DataOut,
+rxClock => serialClock,
+txClock => serialClock,
+rxd => rxd1,
+txd => txd1,
+n_cts => '0',
+n_dcd => '0',
+n_rts => rts1
+);
+
+sd1 : entity work.sd_controller 
+port map(
+sdCS => sdCS,
+sdMOSI => sdMOSI,
+sdMISO => sdMISO,
+sdSCLK => sdSCLK,
+n_wr => n_sdCardCS or cpuClock or n_WR,
+n_rd => n_sdCardCS or cpuClock or (not n_WR),
+n_reset => n_reset,
+dataIn => cpuDataOut,
+dataOut => sdCardDataOut,
+regAddr => cpuAddress(2 downto 0),
+driveLED => driveLED,
+clk => sdClock -- twice the spi clk
+);
 	
 -- ____________________________________________________________________________________
 -- MEMORY READ/WRITE LOGIC GOES HERE
 
+n_memRD <= not(cpuClock) nand n_WR;
+n_memWR <= not(cpuClock) nand (not n_WR);
+
 -- ____________________________________________________________________________________
 -- CHIP SELECTS GO HERE
+
+n_basRomCS <= '0' when cpuAddress(15 downto 13) = "111" else '1'; --8K at top of memory
+n_internalRam1CS <= '0' when cpuAddress(15 downto 12) = "0000" else '1';
+n_sdCardCS <= '0' when cpuAddress(15 downto 3) = "1111111111011" else '1'; -- 8 bytes FFD8-FFDF
 
 -- ____________________________________________________________________________________
 -- BUS ISOLATION GOES HERE
 
+cpuDataIn <=
+interface1DataOut when n_interface1CS = '0' else
+interface2DataOut when n_interface2CS = '0' else
+sdCardDataOut when n_sdCardCS = '0' else
+basRomData when n_basRomCS = '0' else
+internalRam1DataOut when n_internalRam1CS= '0' else
+x"FF";
+
 -- ____________________________________________________________________________________
 -- SYSTEM CLOCKS GO HERE
+
+-- SUB-CIRCUIT CLOCK SIGNALS 
+serialClock <= serialClkCount(15);
+process (clk)
+begin
+if rising_edge(clk) then
+
+if cpuClkCount < 4 then -- 4 = 10MHz, 3 = 12.5MHz, 2=16.6MHz, 1=25MHz
+cpuClkCount <= cpuClkCount + 1;
+else
+cpuClkCount <= (others=>'0');
+end if;
+if cpuClkCount < 2 then -- 2 when 10MHz, 2 when 12.5MHz, 2 when 16.6MHz, 1 when 25MHz
+cpuClock <= '0';
+else
+cpuClock <= '1';
+end if; 
+
+if sdClkCount < 49 then -- 1MHz
+sdClkCount <= sdClkCount + 1;
+else
+sdClkCount <= (others=>'0');
+end if;
+if sdClkCount < 25 then
+sdClock <= '0';
+else
+sdClock <= '1';
+end if;
+
+-- Serial clock DDS
+-- 50MHz master input clock:
+-- Baud Increment
+-- 115200 2416
+-- 38400 805
+-- 19200 403
+-- 9600 201
+-- 4800 101
+-- 2400 50
+serialClkCount <= serialClkCount + 2416;
+end if;
+end process;
 
 end;
