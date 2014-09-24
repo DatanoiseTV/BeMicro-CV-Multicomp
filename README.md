@@ -15,3 +15,10 @@ Roadmap
 I am planning to add more than the currently available 4K of internal SRAM.
 Eventually, I will make a DDR3 Interface, which will behave like SRAM, so
 the full 1GiB of the Board could be theoretically used.
+
+Memory Map
+==========
+8K at Top Memory: Basic ROM for 6502
+FFD0-FFD1: UART Interface
+FFD2-FFD3: Graphics Interface
+FFD8-FFDF: SD-Card
