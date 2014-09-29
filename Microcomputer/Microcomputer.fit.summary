@@ -1,15 +1,15 @@
-Fitter Status : Successful - Wed Sep 24 18:07:23 2014
+Fitter Status : Successful - Tue Sep 30 00:04:53 2014
 Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Web Edition
 Revision Name : Microcomputer
 Top-level Entity Name : Microcomputer
 Family : Cyclone V
 Device : 5CEFA2F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 1,330 / 9,430 ( 14 % )
-Total registers : 863
+Logic utilization (in ALMs) : 1,808 / 9,430 ( 19 % )
+Total registers : 1135
 Total pins : 25 / 224 ( 11 % )
 Total virtual pins : 0
-Total block memory bits : 368,768 / 1,802,240 ( 20 % )
+Total block memory bits : 631,040 / 1,802,240 ( 35 % )
 Total DSP Blocks : 0 / 25 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

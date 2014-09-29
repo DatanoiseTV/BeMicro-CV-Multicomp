@@ -18,7 +18,7 @@ the full 1GiB of the Board could be theoretically used.
 
 Memory Map
 ==========
-* 8K at Top Memory: Basic ROM for 6502
+* E000-FFFF: Basic ROM for 6502
 * FFD0-FFD1: UART Interface
 * FFD2-FFD3: Graphics Interface
 * FFD8-FFDF: SD-Card

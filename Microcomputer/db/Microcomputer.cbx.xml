@@ -1,13 +1,15 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Microcomputer">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|M6502_BASIC_ROM:rom1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_t4f1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|SBCTextDisplayRGB:io2|DisplayRam2K:\GEN_2KATTRAM:dispAttRam|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1ed2.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|SBCTextDisplayRGB:io2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_45m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|InternalRam4K:ram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ba04.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|Z80_CPM_BASIC_ROM:rom1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6ef1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|InternalRam4K:ram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ku04.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|SBCTextDisplayRGB:io2|CGABoldRomReduced:\GEN_REDUCED_CHARS:fontRom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_jjh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|T80s:cpu1|T80:u0|T80_Reg:Regs|altsyncram:RegsL_rtl_0" CBX_FILE_NAME="altsyncram_6tm1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|bufferedUART:io1|altsyncram:rxBuffer_rtl_0" CBX_FILE_NAME="altsyncram_jik1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|SBCTextDisplayRGB:io2|DisplayRam2K:\GEN_2KRAM:dispCharRam|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1ed2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|SBCTextDisplayRGB:io2|DisplayRam2K:\GEN_2KATTRAM:dispAttRam|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1ed2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|SBCTextDisplayRGB:io2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_45m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|SBCTextDisplayRGB:io2|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_45m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Microcomputer|T80s:cpu1|T80:u0|T80_Reg:Regs|altsyncram:RegsH_rtl_0" CBX_FILE_NAME="altsyncram_6tm1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

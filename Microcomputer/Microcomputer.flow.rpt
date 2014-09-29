@@ -1,5 +1,5 @@
 Flow report for Microcomputer
-Wed Sep 24 18:08:42 2014
+Tue Sep 30 00:05:41 2014
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Wed Sep 24 18:07:43 2014      ;
+; Flow Status                     ; Successful - Tue Sep 30 00:05:06 2014      ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                   ; Microcomputer                              ;
 ; Top-level Entity Name           ; Microcomputer                              ;
 ; Family                          ; Cyclone V                                  ;
 ; Device                          ; 5CEFA2F23C8                                ;
 ; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 1,330 / 9,430 ( 14 % )                     ;
-; Total registers                 ; 863                                        ;
+; Logic utilization (in ALMs)     ; 1,808 / 9,430 ( 19 % )                     ;
+; Total registers                 ; 1135                                       ;
 ; Total pins                      ; 25 / 224 ( 11 % )                          ;
 ; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 368,768 / 1,802,240 ( 20 % )               ;
+; Total block memory bits         ; 631,040 / 1,802,240 ( 35 % )               ;
 ; Total DSP Blocks                ; 0 / 25 ( 0 % )                             ;
 ; Total HSSI RX PCSs              ; 0                                          ;
 ; Total HSSI PMA RX Deserializers ; 0                                          ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/24/2014 18:04:29 ;
+; Start date & time ; 09/29/2014 23:45:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Microcomputer       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                        ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 8796747830023.141157466919269                ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 8796747830023.141202710401533                ; --            ; --          ; --         ;
 ; IP_GENERATED_DEVICE_FAMILY          ; {Cyclone V}                                  ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ROM: 1-PORT                                  ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ROM: 1-PORT                                  ; --            ; --          ; --         ;
@@ -138,11 +138,14 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 898 MB              ; 00:00:19                           ;
-; Fitter                    ; 00:02:24     ; 1.0                     ; 1458 MB             ; 00:02:01                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 825 MB              ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:53     ; 1.0                     ; 1058 MB             ; 00:00:40                           ;
-; Total                     ; 00:03:52     ; --                      ; --                  ; 00:03:09                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 919 MB              ; 00:00:21                           ;
+; Fitter                    ; 00:01:45     ; 1.0                     ; 1463 MB             ; 00:01:41                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 837 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:32     ; 1.0                     ; 1080 MB             ; 00:00:30                           ;
+; Fitter                    ; 00:01:42     ; 1.0                     ; 1484 MB             ; 00:01:38                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 839 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:32     ; 1.0                     ; 1079 MB             ; 00:00:31                           ;
+; Total                     ; 00:05:06     ; --                      ; --                  ; 00:04:53                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -155,6 +158,9 @@ agreement for further details.
 ; Fitter                    ; debian           ; Debian GNU/Linux ; Debian GNU/Linux ; x86_64         ;
 ; Assembler                 ; debian           ; Debian GNU/Linux ; Debian GNU/Linux ; x86_64         ;
 ; TimeQuest Timing Analyzer ; debian           ; Debian GNU/Linux ; Debian GNU/Linux ; x86_64         ;
+; Fitter                    ; debian           ; Debian GNU/Linux ; Debian GNU/Linux ; x86_64         ;
+; Assembler                 ; debian           ; Debian GNU/Linux ; Debian GNU/Linux ; x86_64         ;
+; TimeQuest Timing Analyzer ; debian           ; Debian GNU/Linux ; Debian GNU/Linux ; x86_64         ;
 +---------------------------+------------------+------------------+------------------+----------------+
 
 
@@ -163,6 +169,9 @@ agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Microcomputer -c Microcomputer
 quartus_fit --read_settings_files=off --write_settings_files=off Microcomputer -c Microcomputer
+quartus_asm --read_settings_files=off --write_settings_files=off Microcomputer -c Microcomputer
+quartus_sta Microcomputer -c Microcomputer
+quartus_fit --read_settings_files=on --write_settings_files=off Microcomputer -c Microcomputer
 quartus_asm --read_settings_files=off --write_settings_files=off Microcomputer -c Microcomputer
 quartus_sta Microcomputer -c Microcomputer
 
