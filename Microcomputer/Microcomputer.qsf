@@ -166,7 +166,7 @@ set_global_assignment -name VHDL_FILE ../Components/M6502/T65_Pack.vhd
 set_global_assignment -name VHDL_FILE ../Components/M6502/T65_MCode.vhd
 set_global_assignment -name VHDL_FILE ../Components/M6502/T65_ALU.vhd
 set_global_assignment -name VHDL_FILE ../Components/M6502/T65.vhd
-set_global_assignment -name VHDL_FILE Microcomputer.vhd
+set_global_assignment -name VHDL_FILE Microcomputer_Z80_CPM.vhd
 set_global_assignment -name CDF_FILE output_files/Microcomputer.cdf
 set_global_assignment -name VHDL_FILE ../Components/SDCARD/sd_controller.vhd
 set_global_assignment -name QIP_FILE ../ROMS/6502/M6502_BASIC_ROM.qip
