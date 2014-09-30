@@ -23,13 +23,6 @@ entity Microcomputer is
 		n_reset		: in std_logic;
 		clk			: in std_logic;
 
-		
-		--sramData		: inout std_logic_vector(7 downto 0);
-		--sramAddress	: out std_logic_vector(15 downto 0);
-		--n_sRamWE		: out std_logic;
-		--n_sRamCS		: out std_logic;
-		--n_sRamOE		: out std_logic;
-		
 		rxd1			: in std_logic;
 		txd1			: out std_logic;
 		rts1			: out std_logic;
@@ -104,7 +97,7 @@ architecture struct of Microcomputer is
 	signal sdClock						: std_logic;	
 	
 	--CPM
-   signal n_RomActive : std_logic := '0';
+	signal n_RomActive : std_logic := '0';
 
 	
 begin
@@ -120,24 +113,9 @@ n_RomActive <= '1';
 end if;
 end if;
 end process;
+
 -- ____________________________________________________________________________________
 -- CPU CHOICE GOES HERE
-
---cpu1 : entity work.T65
---port map(
---Enable => '1',
---Mode => "00",
---Res_n => n_reset,
---Clk => cpuClock,
---Rdy => '1',
---Abort_n => '1',
---IRQ_n => '1',
---NMI_n => '1',
---SO_n => '1',
---R_W_n => n_WR,
---A(15 downto 0) => cpuAddress,
---DI => cpuDataIn,
---DO => cpuDataOut);
 
 cpu1 : entity work.t80s
 generic map(mode => 1, t2write => 1, iowait => 0)
@@ -159,13 +137,6 @@ do => cpuDataOut);
 -- ____________________________________________________________________________________
 -- ROM GOES HERE	
 	
---rom1 : entity work.M6502_BASIC_ROM -- 8KB BASIC
---port map(
---address => cpuAddress(12 downto 0),
---clock => clk,
---q => basRomData
---);	
-
 rom1 : entity work.Z80_CPM_BASIC_ROM -- 8KB BASIC
 port map(
 address => cpuAddress(12 downto 0),
@@ -175,6 +146,9 @@ q => basRomData
 	
 -- ____________________________________________________________________________________
 -- RAM GOES HERE
+
+-- In fact, our 4K RAM is now 64K with an additional RDEN Signal, so
+-- it doesn't put garbage on our data bus.
 
 ram1: entity work.InternalRam4K
 port map
@@ -190,52 +164,6 @@ q => internalRam1DataOut
 
 -- ____________________________________________________________________________________
 -- INPUT/OUTPUT DEVICES GO HERE	
---io1 : entity work.bufferedUART
---port map(
---clk => clk,
---n_wr => n_interface1CS or cpuClock or n_WR,
---n_rd => n_interface1CS or cpuClock or (not n_WR),
---n_int => n_int1,
---regSel => cpuAddress(0),
---dataIn => cpuDataOut,
---dataOut => interface1DataOut,
---rxClock => serialClock,
---txClock => serialClock,
---rxd => rxd1,
---txd => txd1,
---n_cts => '0',
---n_dcd => '0',
---n_rts => rts1
---);
---
---io2 : entity work.SBCTextDisplayRGB
---port map (
---n_reset => n_reset,
---clk => clk,
---
----- RGB video signals
---hSync => hSync,
---vSync => vSync,
---videoR0 => videoR0,
---videoR1 => videoR1,
---videoG0 => videoG0,
---videoG1 => videoG1,
---videoB0 => videoB0,
---videoB1 => videoB1,
---
----- Monochrome video signals (when using TV timings only)
---sync => videoSync,
---video => video,
---
---n_wr => n_interface2CS or cpuClock or n_WR,
---n_rd => n_interface2CS or cpuClock or (not n_WR),
---n_int => n_int1,
---regSel => cpuAddress(0),
---dataIn => cpuDataOut,
---dataOut => interface2DataOut,
---ps2Clk => ps2Clk,
---ps2Data => ps2Data
---);
 
 io1 : entity work.bufferedUART
 port map(
@@ -284,22 +212,6 @@ ps2Clk => ps2Clk,
 ps2Data => ps2Data
 );
 
---sd1 : entity work.sd_controller 
---port map(
---sdCS => sdCS,
---sdMOSI => sdMOSI,
---sdMISO => sdMISO,
---sdSCLK => sdSCLK,
---n_wr => n_sdCardCS or cpuClock or n_WR,
---n_rd => n_sdCardCS or cpuClock or (not n_WR),
---n_reset => n_reset,
---dataIn => cpuDataOut,
---dataOut => sdCardDataOut,
---regAddr => cpuAddress(2 downto 0),
---driveLED => driveLED,
---clk => sdClock -- twice the spi clk
---);
-
 sd1 : entity work.sd_controller
 port map(
 sdCS => sdCS,
@@ -319,9 +231,6 @@ clk => sdClock -- twice the spi clk
 -- ____________________________________________________________________________________
 -- MEMORY READ/WRITE LOGIC GOES HERE
 
---n_memRD <= not(cpuClock) nand n_WR;
---n_memWR <= not(cpuClock) nand (not n_WR);
-
 n_ioWR <= n_WR or n_IORQ;
 n_memWR <= n_WR or n_MREQ;
 n_ioRD <= n_RD or n_IORQ;
@@ -330,20 +239,12 @@ n_memRD <= n_RD or n_MREQ;
 -- ____________________________________________________________________________________
 -- CHIP SELECTS GO HERE
 
---n_basRomCS <= '0' when cpuAddress(15 downto 13) = "111" else '1'; --8K at top of memory
---n_interface1CS <= '0' when cpuAddress(15 downto 1) = "111111111101000" else '1'; -- 2 bytes FFD0-FFD1
---n_interface2CS <= '0' when cpuAddress(15 downto 1) = "111111111101001" else '1'; -- 2 bytes FFD2-FFD3
---n_internalRam1CS <= '0' when cpuAddress(15) = '0' else '1';
---n_sdCardCS <= '0' when cpuAddress(15 downto 3) = "1111111111011" else '1'; -- 8 bytes FFD8-FFDF
-
-
---n_basRomCS <= '0' when cpuAddress(15 downto 13) = "000" else '1'; --8K at bottom of memory
 n_basRomCS <= '0' when cpuAddress(15 downto 13) = "000" and n_RomActive = '0' else '1'; --8K at bottom of memory
-
 n_interface1CS <= '0' when cpuAddress(7 downto 1) = "1000000" and (n_ioWR='0' or n_ioRD = '0') else '1'; -- 2 Bytes $80-$81
 n_interface2CS <= '0' when cpuAddress(7 downto 1) = "1000001" and (n_ioWR='0' or n_ioRD = '0') else '1'; -- 2 Bytes $82-$83
 n_sdCardCS <= '0' when cpuAddress(7 downto 3) = "10001" and (n_ioWR='0' or n_ioRD = '0') else '1'; -- 8 Bytes $88-$8F
 n_internalRam1CS <= not n_basRomCS;
+
 -- ____________________________________________________________________________________
 -- BUS ISOLATION GOES HERE
 
@@ -354,7 +255,6 @@ sdCardDataOut when n_sdCardCS = '0' else
 basRomData when n_basRomCS = '0' else
 internalRam1DataOut when n_internalRam1CS= '0' else
 x"FF";
-
 
 -- ____________________________________________________________________________________
 -- SYSTEM CLOCKS GO HERE
